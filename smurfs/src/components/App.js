@@ -18,9 +18,9 @@ class App extends Component {
   render() {
       return (
           <div>
-              {this.props.smurfs.map((smurf, index) => (
+              {this.props.smurfs.map((smurf) => (
                   <Smurf
-                  key={index}
+                  key={smurf.id}
                   smurf={smurf}
                   />
               ))}
