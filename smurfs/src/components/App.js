@@ -3,7 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { fetchingSmurfs } from '../actions'
 import Smurf from './Smurf';
-// import SmurfForm from '../components/SmurfForm';
+import SmurfForm from '../components/SmurfForm';
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -18,12 +18,13 @@ class App extends Component {
   render() {
       return (
           <div>
-              {this.props.smurfs.map((smurf) => (
-                  <Smurf
-                  key={smurf.id}
-                  smurf={smurf}
-                  />
-              ))}
+            <SmurfForm />
+            {this.props.smurfs.map((smurf) => (
+                <Smurf
+                key={smurf.id}
+                smurf={smurf}
+                />
+            ))}
           </div>
       )
   }
