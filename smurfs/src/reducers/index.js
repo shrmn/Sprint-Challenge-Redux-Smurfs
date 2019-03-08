@@ -58,7 +58,7 @@ export const smurfsReducer = (state = initialState, action) => {
     case ADD_SMURF_SUCCESS:
       return {
         ...state,
-        smurfs: [ ...state.smurfs, ...action.payload],
+        smurfs: [ ...action.payload],
         addingSmurf: false
       }
 
